@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ismail ALTAY\\.vscode Projects\\BookStores\\WebApi\\WebApi.csproj": {}
+    "c:\\Users\\Ismail ALTAY\\.vscode Projects\\BookStores\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ismail ALTAY\\.vscode Projects\\BookStores\\WebApi\\WebApi.csproj": {
+    "c:\\Users\\Ismail ALTAY\\.vscode Projects\\BookStores\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ismail ALTAY\\.vscode Projects\\BookStores\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "c:\\Users\\Ismail ALTAY\\.vscode Projects\\BookStores\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Users\\Ismail ALTAY\\.vscode Projects\\BookStores\\WebApi\\WebApi.csproj",
+        "projectPath": "c:\\Users\\Ismail ALTAY\\.vscode Projects\\BookStores\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\Ismail ALTAY\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ismail ALTAY\\.vscode Projects\\BookStores\\WebApi\\obj\\",
+        "outputPath": "c:\\Users\\Ismail ALTAY\\.vscode Projects\\BookStores\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ismail ALTAY\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,18 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.3.4, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.6, )"
@@ -47,6 +59,10 @@
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[5.0.4, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
