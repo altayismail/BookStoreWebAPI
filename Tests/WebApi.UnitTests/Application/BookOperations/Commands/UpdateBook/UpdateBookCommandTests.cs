@@ -5,6 +5,7 @@ using FluentAssertions;
 using TestSetup;
 using WebApi.Application.BookOperations.Commands.UpdateBook;
 using WebApi.DBOperations;
+using WebApi.Entities;
 using Xunit;
 
 namespace Application.BookOperations.Commands.UpdateBook
@@ -35,23 +36,21 @@ namespace Application.BookOperations.Commands.UpdateBook
         public void WhenValidBookIdIsGiven_Book_ShouldBeUpdated()
         {
             UpdateBookCommand command = new(_context);
-            UpdateBookViewModel model = new UpdateBookViewModel() 
+            var book = new Book()
             {
-                Title = "Game of Thrones",
-                GenreId = 1,
-                AuthorId = 3
+                Title = "Get out of Here",PageCount = 10,GenreId = 1,AuthorId = 1,PublishDate = DateTime.Now.AddYears(-31)
             };
-
-            command.Model = model;
-            command.BookId = 1;
+            _context.Books.Add(book);
+            _context.SaveChanges();
+            command.Model = new UpdateBookViewModel(){Title = "Kırmızı Başlıklı Kız",GenreId = 2,AuthorId =2};
+            command.BookId = book.Id;
 
             FluentActions.Invoking(() => command.Handle()).Invoke();
-
-            var book = _context.Books.SingleOrDefault(book => book.Id == command.BookId);
-            book.Should().NotBeNull();
-            book.Title.Should().Be(model.Title);
-            book.GenreId.Should().Be(model.GenreId);
-            book.AuthorId.Should().Be(model.AuthorId);
+            var result = _context.Books.FirstOrDefault(x => x.Id == book.Id);
+            result.Should().NotBeNull();
+            result.Title.Should().Be(command.Model.Title);
+            result.GenreId.Should().Be(command.Model.GenreId);
+            result.AuthorId.Should().Be(command.Model.AuthorId);
 
         }
     }

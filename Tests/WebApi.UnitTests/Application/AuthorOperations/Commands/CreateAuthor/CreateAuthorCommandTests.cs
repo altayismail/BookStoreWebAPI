@@ -24,7 +24,7 @@ namespace Application.AuthorOperations.Commands.CreateAuthor
 
             var author = new Author(){Name = "Burak",LastName = "Yılmaz",Birthday = System.DateTime.Now.AddYears(-34)};
             CreateAuthorCommand command = new(_context);
-            _context.Add(author);
+            _context.Authors.Add(author);
             _context.SaveChanges();
 
             var model = new CreateAuthorViewModel(){Name = author.Name,LastName = author.LastName};

@@ -45,7 +45,7 @@ namespace Application.BookOperations.Commands.CreateBook
 
             FluentActions.Invoking(() => command.Handle()).Invoke();
 
-            var book = _context.Books.SingleOrDefault(book => book.Title == model.Title);
+            var book = _context.Books.FirstOrDefault(book => book.Title == model.Title);
             book.Should().NotBeNull();
             book.PageCount.Should().Be(model.PageCount);
             book.PublishDate.Should().Be(model.PublishDate);
