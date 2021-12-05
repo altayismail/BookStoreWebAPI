@@ -39,7 +39,7 @@ namespace Application.BookOperations.Commands.CreateBook
             CreateBookCommand command = new(_context,_mapper);
             CreateViewModel model = new CreateViewModel() 
             {
-                Title = "Game of Thrones", PageCount = 1000, PublishDate = DateTime.Now.Date.AddYears(-10), GenreId = 1, AuthorId = 1
+                Title = "Bu Kitap Mevcut Olmamalı", PageCount = 1000, PublishDate = DateTime.Now.Date.AddYears(-10), GenreId = 1, AuthorId = 1
             };
             command.Model = model;
 
