@@ -1,6 +1,5 @@
 using System;
 using System.Linq;
-using AutoMapper;
 using FluentAssertions;
 using TestSetup;
 using WebApi.Application.AuthorOperations.Commands.CreateAuthor;
