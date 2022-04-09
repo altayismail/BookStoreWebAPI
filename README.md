@@ -1,4 +1,4 @@
-# This is a .NET Core Web API Project which is called by me BookStoreWebAPI.
+# .NET Core Web API Project - BookStoreWebAPI.
 - There are Book, Author and Genre entities.
 - There are GET, POST, PUT and DELETE operations for these entities.
 - In Memory Database used.
@@ -7,5 +7,5 @@
 - API tests are done by Postman.
 - For Authentication, JWT Bearer Token used.
 - Application includes, Custom exception handler.
-- As a middleware, Http request-respond code and situations asyncly written in console.
+- As a Logger, Http request-respond code and situations asyncly written in console.
 - Also error messages asyncly written in console.
